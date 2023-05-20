@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #myImage {
+        width: 200px;
+        transition: width 0.5s;
+        display: block;
+        margin: 30px auto;
+      }
+      .btn {
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <img id="myImage" src="images/img2.jpg" />
+    <button class="btn" onclick="changeImageSize()">Change Size</button>
+
+    <script>
+      let isImageBig = false;
+      let image = document.getElementById("myImage");
+
+      function changeImageSize() {
+        if (isImageBig) {
+          image.style.width = "200px";
+          isImageBig = false;
+        } else {
+          image.style.width = "400px";
+          
+          isImageBig = true;
+        }
+      }
+    </script>
+  </body>
+</html>
